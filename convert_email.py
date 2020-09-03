@@ -1,3 +1,14 @@
+"""
+Creates a new csv containing the users with the target email domain for the email migration.
+
+Needs to receive a csv downloaded from the source G-Suite domain.
+
+The newly created csv will be uploaded to the target G-Suite account to bulk create new users - these are the targets for the migration.
+
+The newly created csv will also be used in ``bulk_upload.py`` so it can pull the new email into its own csv which will be used to initiate the migration. 
+"""
+
+
 import csv
 from csv import reader
 import pandas as pd
